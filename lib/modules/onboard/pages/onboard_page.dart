@@ -33,7 +33,6 @@ class OnboardPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text(
             subtitle,
-            // textAlign: TextAlign.center,
             style: const TextStyle(
                 fontSize: 16, color: Color.fromARGB(255, 8, 8, 8)),
           ),
@@ -49,7 +48,6 @@ class OnboardPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Text(
             description,
-            // textAlign: TextAlign.center,
             style: const TextStyle(
                 fontSize: 16, color: Color.fromARGB(255, 8, 8, 8)),
           ),

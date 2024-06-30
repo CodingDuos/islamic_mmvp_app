@@ -1,13 +1,7 @@
-
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:mmvp_isllamic/commons/common_imports/common_libs.dart';
-
-
-import 'package:mmvp_isllamic/utils/thems/styles_manager.dart';
 
 class Utils {
   static void fieldFocusChange(
@@ -24,23 +18,22 @@ class Utils {
     );
   }
 
-  // static void showCustomSnackbar(
-  //     BuildContext context, String title, String message) {
-  //   final snackBar = SnackBar(
-  //     // duration: Duration(microseconds: 2000),
-  //     content: Text(message),
-  //     backgroundColor: Colors.blue, // Customize background color
-  //     behavior: SnackBarBehavior.floating, // Make it floating
-  //     shape: RoundedRectangleBorder(
-  //         borderRadius: BorderRadius.circular(20)), // Add rounded corners
-  //     action: SnackBarAction(
-  //       label: title,
-  //       onPressed: () {},
-  //     ),
-  //   );
+  static void showCustomSnackbar(
+      BuildContext context, String title, String message) {
+    final snackBar = SnackBar(
+      duration: const Duration(microseconds: 2000),
+      content: Text(message),
+      backgroundColor: Colors.blue,
+      behavior: SnackBarBehavior.floating,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      action: SnackBarAction(
+        label: title,
+        onPressed: () {},
+      ),
+    );
 
-  //   ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  // }
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
 }
 
 Widget spacer({double height = 16}) {
@@ -71,7 +64,7 @@ String getDayFromEpoch(int dt) {
 }
 
 class Loading extends StatelessWidget {
-  const Loading({Key? key}) : super(key: key);
+  const Loading({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -84,8 +77,8 @@ class Loading extends StatelessWidget {
 }
 
 class SomethingWentWrong extends StatelessWidget {
-  const SomethingWentWrong({Key? key, this.message = "Something went wrong !"})
-      : super(key: key);
+  const SomethingWentWrong(
+      {super.key, this.message = "Something went wrong !"});
   final String message;
 
   @override
@@ -101,8 +94,7 @@ class SomethingWentWrong extends StatelessWidget {
 }
 
 class NoRecordFound extends StatelessWidget {
-  const NoRecordFound({Key? key, this.message = "No Records"})
-      : super(key: key);
+  const NoRecordFound({super.key, this.message = "No Records"});
   final String message;
 
   @override
@@ -117,13 +109,6 @@ class NoRecordFound extends StatelessWidget {
   }
 }
 
-
-/// ***
-/// This class consist of all the colors used in this package
-///
-/// Author: Vivek Kaushik <me@vivekkasuhik.com>
-/// github: https://github.com/iamvivekkaushik/
-/// ***
 class AppColors {
   AppColors._();
 
